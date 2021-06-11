@@ -10,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.DOUBLE
     },
     image: {
-      type: Sequelize.BLOB('long')
+      type: Sequelize.STRING
     }
   });
 

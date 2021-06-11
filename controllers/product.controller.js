@@ -3,8 +3,6 @@ const Product = db.products;
 const Op = db.Sequelize.Op;
 var fs = require('fs');
 
-var imageData = fs.readFileSync('./assets/images/mok.jpg');
-
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
     // Validate request
@@ -20,14 +18,14 @@ exports.create = (req, res) => {
       title: req.body.title,
       description: req.body.description,
       price: req.body.price,
-      image: imageData,
+      image: req.body.image,
       published: req.body.published ? req.body.published : false
     };
   
     // Save Tutorial in the database
     Product.create(products)
       .then(data => {
-        fs.writeFileSync('./assets/images/mok.jpg', products.image);	
+        // fs.writeFileSync('./assets/images/mok.jpg', products.image);	
         res.send(data);
       })
       .catch(err => {

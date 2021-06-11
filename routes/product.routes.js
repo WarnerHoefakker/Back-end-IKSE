@@ -12,7 +12,7 @@
     router.post("/", jsonParser, [authJwt.verifyToken, authJwt.isAdmin], products.create, );
   
     // Retrieve all products
-    router.get("/", [authJwt.verifyToken, authJwt.isAdmin], products.findAll);
+    router.get("/", [authJwt.verifyToken], products.findAll);
   
     // Retrieve all published products
     router.get("/published",[authJwt.verifyToken], products.findAllPublished);
