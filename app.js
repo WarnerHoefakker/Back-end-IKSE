@@ -41,6 +41,7 @@ app.use(cors(corsOptions));
 const productRoutes = require("./routes/product.routes");
 const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
+const orderRoutes = require('./routes/order.routes');
 // const adminRoutes = require('./routes/admin');
 // const shopRoutes = require('./routes/shop');
 
@@ -54,6 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(authRoutes);
 app.use(userRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes);
 
 // app.use((req, res, next) => {
 //     res.status(404).json("404 page");
