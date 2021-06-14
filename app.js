@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require("cors");
 
 var corsOptions = {
-    origin: "http://localhost:8080"
+    origin: "http://134.122.51.241:8080"
   };
   
 const db = require("./models");

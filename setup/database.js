@@ -3,7 +3,7 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '123',
+    password: 'ElshofFey01!',
     database: 'sitepoint'
 });
 connection.connect((err) => {
@@ -14,7 +14,7 @@ connection.connect((err) => {
 module.exports = {
     HOST: "localhost",
     USER: "root",
-    PASSWORD: "123",
+    PASSWORD: "ElshofFey01!",
     DB: "sitepoint",
     dialect: "mysql",
     pool: {
