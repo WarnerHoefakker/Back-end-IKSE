@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require("cors");
+const https = require('https');
 
 var corsOptions = {
     origin: "http://134.122.51.241:8080"
@@ -62,4 +63,11 @@ app.use('/api/orders', orderRoutes);
 // });
 
 
-app.listen(8080);
+// app.listen(8080);
+// https.createServer(app).listen(8080);
+https.createServer({
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem'),
+  passphrase: 'YOUR PASSPHRASE HERE'
+}, app)
+.listen(8080);
