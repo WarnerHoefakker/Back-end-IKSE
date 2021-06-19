@@ -14,7 +14,7 @@ connection.connect((err) => {
 
 module.exports = {
     HOST: "app-e41a0fdc-28d3-4f19-a4a1-9f99f415feed-do-user-8319964-0.b.db.ondigitalocean.com",
-    PORT: "25060"
+    PORT: "25060",
     USER: "sitepoint",
     PASSWORD: "yekvmbn5019nsras",
     DB: "sitepoint",
