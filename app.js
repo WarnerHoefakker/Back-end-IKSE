@@ -8,7 +8,7 @@ const https = require('https');
 var corsOptions = {
     origin: "http://134.122.51.241:8080"
   };
-  
+
 const db = require("./models");
 const Role = db.role;
 db.sequelize.sync();
@@ -23,12 +23,12 @@ function initial() {
       id: 1,
       name: "user"
     });
-   
+
     Role.create({
       id: 2,
       name: "moderator"
     });
-   
+
     Role.create({
       id: 3,
       name: "admin"
@@ -63,11 +63,11 @@ app.use('/api/orders', orderRoutes);
 // });
 
 
-// app.listen(8080);
+app.listen(8080);
 // https.createServer(app).listen(8080);
-https.createServer({
-  key: fs.readFileSync('./key.pem'),
-  cert: fs.readFileSync('./cert.pem'),
-  passphrase: 'YOUR PASSPHRASE HERE'
-}, app)
-.listen(8080);
+// https.createServer({
+//   key: fs.readFileSync('./key.pem'),
+//   cert: fs.readFileSync('./cert.pem'),
+//   passphrase: 'YOUR PASSPHRASE HERE'
+// }, app)
+// .listen(8080);

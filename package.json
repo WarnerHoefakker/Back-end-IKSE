@@ -1,7 +1,7 @@
 {
-  "name": "Backend IKSE",
+  "name": "Backend-IKSE",
   "version": "1.0.0",
-  "description": "Back-end IKSE",
+  "description": "Backend-IKSE",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
