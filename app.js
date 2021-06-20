@@ -6,7 +6,7 @@ const cors = require("cors");
 const https = require('https');
 
 var corsOptions = {
-    origin: "http://134.122.51.241:8080"
+    origin: "http://134.122.51.241:443"
   };
 
 const db = require("./models");
@@ -63,7 +63,7 @@ app.use('/api/orders', orderRoutes);
 // });
 
 
-app.listen(8080);
+app.listen(443);
 // https.createServer(app).listen(8080);
 // https.createServer({
 //   key: fs.readFileSync('./key.pem'),
