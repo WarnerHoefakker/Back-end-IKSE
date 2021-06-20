@@ -1,4 +1,5 @@
 // const mysql = require('mysql');
+const postgres = require('pg');
 //
 // const connection = postgres.createConnection({
 //     host: 'app-e41a0fdc-28d3-4f19-a4a1-9f99f415feed-do-user-8319964-0.b.db.ondigitalocean.com',
@@ -19,6 +20,7 @@ module.exports = {
     PASSWORD: "yekvmbn5019nsras",
     DB: "sitepoint",
     dialect: "postgres",
+    sslmode: "require",
     pool: {
       max: 5,
       min: 0,
