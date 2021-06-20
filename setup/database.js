@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
     host: 'db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com',
     port: '25060',
     user: 'doadmin',
-    password: 'adewxg1k5ei5hrl7',
+    password: 'o5rurt8iv516uekc',
     database: 'defaultdb'
 });
 connection.connect((err) => {
@@ -16,7 +16,7 @@ module.exports = {
     HOST: "db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com",
     PORT: "25060",
     USER: "doadmin",
-    PASSWORD: "adewxg1k5ei5hrl7",
+    PASSWORD: "o5rurt8iv516uekc",
     DB: "defaultdb",
     dialect: "mysql",
     sslmode: "REQUIRED",
