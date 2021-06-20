@@ -20,9 +20,9 @@ module.exports = {
     DB: "defaultdb",
     dialect: "mysql",
     pool: {
-      max: 500,
+      max: 5,
       min: 0,
-      acquire: 30000,
-      idle: 10
+      acquire: 50000,
+      idle: 50000
     }
   };
