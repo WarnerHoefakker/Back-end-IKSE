@@ -19,6 +19,11 @@ module.exports = {
     PASSWORD: "o5rurt8iv516uekc",
     DB: "defaultdb",
     dialect: "mysql",
+    dialectOptions: {
+      options: {
+        requestTimeout: 3000
+      }
+    },
     pool: {
       max: 5,
       min: 0,
