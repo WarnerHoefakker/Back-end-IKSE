@@ -19,7 +19,6 @@ module.exports = {
     PASSWORD: "o5rurt8iv516uekc",
     DB: "defaultdb",
     dialect: "mysql",
-    sslmode: "REQUIRED",
     pool: {
       max: 5,
       min: 0,
