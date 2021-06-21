@@ -1,20 +1,20 @@
-// const mysql = require('mysql');
-//
-// const connection = mysql.createConnection({
-//     host: 'db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com',
-//     port: '25060',
-//     user: 'doadmin',
-//     password: 'o5rurt8iv516uekc',
-//     database: 'defaultdb'
-// });
-// connection.connect((err) => {
-//     if (err) throw err;
-//     console.log('Connected!');
-// });
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+    host: 'db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com',
+    port: '25060',
+    user: 'doadmin',
+    password: 'o5rurt8iv516uekc',
+    database: 'defaultdb'
+});
+connection.connect((err) => {
+    if (err) throw err;
+    console.log('Connected!');
+});
 
 module.exports = {
     HOST: "db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com",
-    // PORT: 25060,
+    PORT: 25060,
     USER: "doadmin",
     PASSWORD: "o5rurt8iv516uekc",
     DB: "defaultdb",
