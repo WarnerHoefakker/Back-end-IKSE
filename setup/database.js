@@ -13,7 +13,7 @@
 // });
 
 module.exports = {
-    HOST: "db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com",
+    HOST: "private-db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com",
     PORT: "25060",
     USER: "doadmin",
     PASSWORD: "o5rurt8iv516uekc",
