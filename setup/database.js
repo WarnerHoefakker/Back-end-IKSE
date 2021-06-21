@@ -19,10 +19,30 @@ module.exports = {
     PASSWORD: "o5rurt8iv516uekc",
     DB: "defaultdb",
     dialect: "mysql",
-    pool: {
-      max: 5,
-      min: 0,
-      // acquire: 50000,
-      idle: 50000
-    }
+    retry: {
+    match: [
+        /ETIMEDOUT/,
+        /EHOSTUNREACH/,
+        /ECONNRESET/,
+        /ECONNREFUSED/,
+        /ETIMEDOUT/,
+        /ESOCKETTIMEDOUT/,
+        /EHOSTUNREACH/,
+        /EPIPE/,
+        /EAI_AGAIN/,
+        /SequelizeConnectionError/,
+        /SequelizeConnectionRefusedError/,
+        /SequelizeHostNotFoundError/,
+        /SequelizeHostNotReachableError/,
+        /SequelizeInvalidConnectionError/,
+        /SequelizeConnectionTimedOutError/
+    ],
+    max: 5
+}
+    // pool: {
+    //   max: 5,
+    //   min: 0,
+    //   // acquire: 50000,
+    //   idle: 50000
+    // }
   };
