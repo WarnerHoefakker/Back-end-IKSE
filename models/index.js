@@ -7,8 +7,10 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   dialect: dbConfig.dialect,
   sslmode: require,
   dialectOptions: {
-    ssl: ca: fs.readFileSync('./ca-certificate.crt'),
-    rejectUnauthorized: false
+    ssl: {
+      ca: fs.readFileSync('./ca-certificate.crt'),
+      rejectUnauthorized: false
+    }
   },
   pool: {
     max: dbConfig.pool.max,
