@@ -17,34 +17,12 @@ module.exports = {
     PORT: "25060",
     USER: "doadmin",
     PASSWORD: "o5rurt8iv516uekc",
-    DB: "defaultdb",
+    DB: "sitepoint",
     dialect: "mysql",
-    retry: {
-    match: [
-        /ETIMEDOUT/,
-        /EHOSTUNREACH/,
-        /ECONNRESET/,
-        /ECONNREFUSED/,
-        /ETIMEDOUT/,
-        /ESOCKETTIMEDOUT/,
-        /EHOSTUNREACH/,
-        /EPIPE/,
-        /EAI_AGAIN/,
-        /SequelizeConnectionError/,
-        /SequelizeConnectionRefusedError/,
-        /SequelizeHostNotFoundError/,
-        /SequelizeHostNotReachableError/,
-        /SequelizeInvalidConnectionError/,
-        /SequelizeConnectionTimedOutError/
-    ],
-    max: 5,
-    min: 1
-
-}
-    // pool: {
-    //   max: 5,
-    //   min: 0,
-    //   // acquire: 50000,
-    //   idle: 50000
-    // }
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 20000
+    }
   };
