@@ -1,34 +1,18 @@
 const dbConfig = require('../setup/database');
 
 const Sequelize = require("sequelize");
-// const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
-//   host: dbConfig.HOST,
-//   dialect: dbConfig.dialect,
-//   // operatorsAliases: false,
-//   dialectOptions: {
-//     connectTimeout: 20000,
-//   },
-//   pool: {
-//     max: dbConfig.pool.max,
-//     min: dbConfig.pool.min,
-//     acquire: dbConfig.pool.acquire,
-//     idle: dbConfig.pool.idle
-//   }
-// });
-
-const sequelize = new Sequelize("sitepoint", "doadmin", "o5rurt8iv516uekc", {
-  host: "db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com",
-  dialect: "mysql",
-  sslmode: "REQUIRED"
+const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
+  host: dbConfig.HOST,
+  dialect: dbConfig.dialect,
   // operatorsAliases: false,
   dialectOptions: {
     connectTimeout: 20000,
   },
   pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
+    max: dbConfig.pool.max,
+    min: dbConfig.pool.min,
+    acquire: dbConfig.pool.acquire,
+    idle: dbConfig.pool.idle
   }
 });
 
