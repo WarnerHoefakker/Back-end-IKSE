@@ -37,7 +37,9 @@ module.exports = {
         /SequelizeInvalidConnectionError/,
         /SequelizeConnectionTimedOutError/
     ],
-    max: 5
+    max: 5,
+    min: 1
+
 }
     // pool: {
     //   max: 5,
