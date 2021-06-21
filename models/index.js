@@ -8,7 +8,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   sslmode: require,
   dialectOptions: {
     ssl: {
-      ca: fs.readFileSync('./ca-certificate.crt'),
+      ca: fs.readFileSync('ca-certificate.crt'),
       rejectUnauthorized: false
     }
   },
