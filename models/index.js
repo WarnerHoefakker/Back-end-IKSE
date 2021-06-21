@@ -1,4 +1,5 @@
 const dbConfig = require('../setup/database');
+const fs = require('fs');
 
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
@@ -6,7 +7,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   dialect: dbConfig.dialect,
   sslmode: require,
   dialectOptions: {
-    ssl: true,
+    ssl: ca: fs.readFileSync('./ca-certificate.crt'),
     rejectUnauthorized: false
   },
   pool: {
