@@ -9,7 +9,7 @@ var corsOptions = {
     origin: "http://134.122.51.241:443"
   };
 
-const db = require("./models/index");
+const db = require("./models");
 const Role = db.role;
 // db.sequelize.sync();
 
