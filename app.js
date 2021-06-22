@@ -6,7 +6,7 @@ const cors = require("cors");
 const https = require('https');
 
 var corsOptions = {
-    origin: "http://134.122.51.241:8080"
+    origin: "https://klectric-9up4r.ondigitalocean.app"
   };
 
 const db = require("./models");
