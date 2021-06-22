@@ -63,8 +63,8 @@ app.use('/api/orders', orderRoutes);
 // });
 
 
-app.listen(8080);
-// https.createServer(app).listen(8080);
+// app.listen(8080);
+https.createServer(app).listen(8080);
 // https.createServer({
 //   key: fs.readFileSync('./key.pem'),
 //   cert: fs.readFileSync('./cert.pem'),
