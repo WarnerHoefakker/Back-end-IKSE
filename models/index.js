@@ -2,23 +2,26 @@ const dbConfig = require('../setup/database');
 const fs = require('fs');
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
-  host: dbConfig.HOST,
-  dialect: dbConfig.dialect,
-  sslmode: require,
-  dialectOptions: {
-    ssl: {
-      ca: fs.readFileSync('ca-certificate.crt'),
-      rejectUnauthorized: false
-    }
-  },
-  pool: {
-    max: dbConfig.pool.max,
-    min: dbConfig.pool.min,
-    acquire: dbConfig.pool.acquire,
-    idle: dbConfig.pool.idle
-  }
-});
+// const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
+//   host: dbConfig.HOST,
+//   dialect: dbConfig.dialect,
+//   sslmode: require,
+//   dialectOptions: {
+//     ssl: {
+//       // ca: fs.readFileSync(__dirname + 'ca-certificate.crt'),
+//       rejectUnauthorized: false
+//     }
+//   },
+//   pool: {
+//     max: dbConfig.pool.max,
+//     min: dbConfig.pool.min,
+//     acquire: dbConfig.pool.acquire,
+//     idle: dbConfig.pool.idle
+//   }
+// });
+
+var sequelize = new Sequelize('mysql://doadmin:o5rurt8iv516uekc@db-mysql-ams3-58397-do-user-8319964-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED', {
+})
 
 sequelize.authenticate().then(() => {
     console.log('Connection to database has been established successfully.');
