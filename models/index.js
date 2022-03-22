@@ -20,7 +20,7 @@ const Sequelize = require("sequelize");
 //   }
 // });
 
-var sequelize = new Sequelize('postgresql://db:RA8hJCOH6JAqeI49@app-00b54062-d141-4055-ad8c-cfbef60cc56f-do-user-8319964-0.b.db.ondigitalocean.com:25060/db?sslmode=require', {
+var sequelize = new Sequelize('mysql://doadmin:OxMwsZESAJ3UWPEk@db-mysql-ams3-15794-do-user-8319964-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED', {
 })
 
 sequelize.authenticate().then(() => {
